@@ -31,8 +31,8 @@
 
 #include <argparse/argparse.hpp>
 
-std::string const version = "0.1.0";
-std::size_t const default_limit = 80;
+char constexpr version[] = "0.1.0";
+std::size_t constexpr default_limit = 80;
 
 int main(int argc, char const* argv[])
 {
