@@ -25,7 +25,6 @@
 */
 
 #include <cstddef>
-#include <cstdint>
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -74,12 +73,12 @@ int main(int argc, char const* argv[])
             std::cout << "[FAIL] no such file: '" << file << "'" << std::endl;
             continue;
         }
-        uint32_t overlines = 0;
+        std::size_t overlines = 0;
         std::size_t oversymbols = 0;
         std::size_t maxwidth = 0;
         std::size_t maxline = 0;
-        std::string line;
         std::size_t index = 0;
+        std::string line;
         std::vector<std::size_t> overlinesindexes;
         while (std::getline(is, line)) {
             ++index;
