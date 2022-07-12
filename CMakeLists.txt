@@ -16,6 +16,6 @@ include_directories(third_party)
 
 file(GLOB_RECURSE PROJECT_SOURCES "src/*.c*")
 
-set(SRC_LIST ${PROJECT_SOURCES} ${PROJECT_HEADERS})
+set(SRC_LIST ${PROJECT_SOURCES})
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})

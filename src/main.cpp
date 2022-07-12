@@ -31,7 +31,7 @@
 
 #include <argparse/argparse.hpp>
 
-char constexpr version[] = "0.1.0";
+char constexpr version[] = "%(prog)s v0.1.0";
 std::size_t constexpr default_limit = 80;
 
 int main(int argc, char const* argv[])
@@ -43,11 +43,11 @@ int main(int argc, char const* argv[])
             .epilog("by rue-ryuzaki (c) 2022");
     parser.add_argument("--version")
             .action("version")
-            .version(parser.prog() + " v" + version);
+            .version(version);
     parser.add_argument("--show_lines")
             .action("store_true")
             .help("show line numbers");
-    parser.add_argument({"-l", "--limit"})
+    parser.add_argument("-l", "--limit")
             .action("store")
             .default_value<std::size_t>(default_limit)
             .help("set line width limit");
